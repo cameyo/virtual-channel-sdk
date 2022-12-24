@@ -2,9 +2,9 @@
 
 ## Chrome extension side
 
-An example test Chrome extension is located in the example\chrome-extension folder.
+An example test Chrome extension is located in the example/chrome-extension folder.
 
-### [manifest.json](example\chrome-extension\public\manifest.json)
+### [manifest.json](example/chrome-extension/public/manifest.json)
 Should allow external connections from cameyo.com. To do this, just add the following:
 ```
 {
@@ -21,7 +21,7 @@ Should allow external connections from cameyo.com. To do this, just add the foll
 ````
 
 ### Code sample
-Sample usage is in the [cameyo_vc_sdk_sample.ts](example\chrome-extension\src\cameyo_vc_sdk_sample.ts) file.
+Sample usage is in the [cameyo_vc_sdk_sample.ts](example/chrome-extension/src/cameyo_vc_sdk_sample.ts) file.
 
 ## Cameyo side
 First of all you need to set !VIRTCHANNEL= and !CHROMEEXTID= [PowerTags](https://helpcenter.cameyo.com/support/solutions/articles/80000254678-power-tags).
@@ -57,4 +57,4 @@ To build sample extension, run `npm run build`, which will create the following 
 * `/dist/background.js` – service worker of Chrome extension;
 * `/dist/manifest.json` – Chrome Extension Manifest V3 file.
 
-Also you can use [build.bat](example\chrome-extension\build.bat) file.
+Also you can use [build.bat](example/chrome-extension/build.bat) file.
