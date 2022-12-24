@@ -50,14 +50,10 @@ To build the SDK, run `npm run build`, which will create the following set of fi
 * `/dist/sdk.js.map` – the SDK source map;
 * `/dist/index.d.ts` – Typescript typings for the SDK.
 
-Also you can use [build.bat](build.bat) file.
-
 ### Sample Chrome extension
 To build sample extension, run `npm run build`, which will create the following set of files:
 * `/dist/background.js` – service worker of Chrome extension;
 * `/dist/manifest.json` – Chrome Extension Manifest V3 file.
-
-Also you can use [build.bat](example/chrome-extension/build.bat) file.
 
 ## Npm package
 To create an nmp package, run `npm pack` command, which will create **cameyo-virtual-channel-sdk-version.tgz**.
