@@ -1,0 +1,22 @@
+{
+    "name": "Cameyo VC sample extension",
+    "description": "Cameyo Virtual Channel sample Chrome extension",
+    "version": "1.4",
+    "manifest_version": 3,
+    "action": {},
+    "author": "Cameyo Inc",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "externally_connectable": {
+        "matches": [
+            "*://*.cameyo.com/*",
+            "*://*.cameyo.net/*"
+        ]
+    },
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "version_name": "1.4 beta"
+}

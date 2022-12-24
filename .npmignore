@@ -1,0 +1,17 @@
+# node folders
+node/
+node_modules/
+
+# folders
+example/
+src/
+
+# dev files
+webpack.config.js
+tsconfig.json
+package-lock.json
+README_dev.md
+pom.xml
+
+# utilities
+*.bat

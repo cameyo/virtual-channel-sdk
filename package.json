@@ -1,0 +1,21 @@
+{
+  "name": "cameyo-virtual-channel-sdk",
+  "version": "1.4.0",
+  "description": "Cameyo Virtual Channel SDK",
+  "main": "dist/sdk.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  },
+  "keywords": [],
+  "author": "Cameyo Inc",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chrome": "^0.0.203",
+    "npm-dts-webpack-plugin": "^1.3.12",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.4",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}
