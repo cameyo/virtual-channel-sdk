@@ -59,3 +59,9 @@ To build sample extension, run `npm run build`, which will create the following 
 To create an nmp package, run `npm pack` command, which will create **cameyo-virtual-channel-sdk-version.tgz**.
 
 To install this package into your project, use `npm install cameyo-virtual-channel-sdk-version.tgz` command.
+
+## Contributing
+Feel free to send pull-requests! All code changes must be:
+* approved by a project maintainer;
+* pass linting (use `npm run lint`);
+* be properly formatted (use `npm run format` or `npm run formatCheck`).
