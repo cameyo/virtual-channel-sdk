@@ -8,4 +8,16 @@ The **Cameyo Virtual Channel** backend uses [Remote Desktop Services Virtual Cha
 
 2. provides a client to communicate over a channel.
 
-An example usage can be found in the [Sample.cs](src/VirtualChannelTestApp/Sample.cs) file.
+## Code sample
+Sample usage is in the [Sample.cs](src/VirtualChannelTestApp/Sample.cs) file.
+
+##  Build
+Use `MSBuild` to build SDK:
+```
+MSBuild src/VirtualChannelSDK/VirtualChannelSDK.csproj -t:restore,build -p:RestorePackagesConfig=true -p:Configuration=Release -p:OutDir=../../dist
+```
+
+## Contributing
+Feel free to send pull-requests! All code changes must be:
+* approved by a project maintainer;
+* pass code analysis (build without warnings and errors).
