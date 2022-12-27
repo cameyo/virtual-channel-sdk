@@ -1,4 +1,4 @@
-# Cameyo Virtual Channel SDK v1.4
+# Cameyo Virtual Channel Client SDK
 
 ## Chrome extension side
 
@@ -22,23 +22,6 @@ Should allow external connections from cameyo.com. To do this, just add the foll
 
 ### Code sample
 Sample usage is in the [cameyo_vc_sdk_sample.ts](example/chrome-extension/src/cameyo_vc_sdk_sample.ts) file.
-
-## Cameyo side
-First of all you need to set !VIRTCHANNEL= and !CHROMEEXTID= [PowerTags](https://helpcenter.cameyo.com/support/solutions/articles/80000254678-power-tags).
-
-Work with many channels is supported, for this it is enough to set them using:
-```
-!VIRTCHANNEL=Ch1,Ch2,ChN
-```
-
-Logging can be enabled using:
-```
-!VIRTCHANNELLOG=1
-```
-
-**Note:** the maximum length of the channel name can be 7 characters (without the end-of-line character), and their number cannot exceed 31. If you specify a longer channel name, it will be truncated to length 7. The number of channels is limited to 20, the remaining 11 are reserved for system purposes.
-
-When session is started and this mechanism is enabled, then CameyoApp connects to the chrome extension via chrome.runtime.connect. background.js (service worker) listens for incoming long lasting port connection. Then to this port adds onMessage message event listener.
 
 ##  Installation
 In order to get started developing, run `npm install` to install the required dependencies.
