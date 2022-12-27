@@ -32,9 +32,9 @@ namespace VirtualChannelSDK
 {
     public class WtsVirtualChannelClient : IDisposable
     {
-        private WtsVirtualChannel _virtualChannel;
-        private WtsVirtualChannelStream _virtualChannelStream;
+        private readonly WtsVirtualChannel _virtualChannel;
 
+        private WtsVirtualChannelStream _virtualChannelStream;
         private bool _disposed;
 
         public WtsVirtualChannelClient(string wtsChannelName)
@@ -76,6 +76,7 @@ namespace VirtualChannelSDK
         public void Dispose()
         {
             Dispose(true);
+            GC.SuppressFinalize(this);
         }
 
         protected virtual void Dispose(bool disposing)

@@ -33,9 +33,9 @@ using VirtualChannelSDK;
 
 namespace VirtualChannelTestApp
 {
-    public class Sample
+    public static class Sample
     {
-        public static void Main(string[] args)
+        public static void Main(string[] _)
         {
             var wtsChannelNameReader = new WtsChannelNameReader();
             var virtualChannelNames = wtsChannelNameReader.GetVirtualChannelNames();

@@ -33,10 +33,10 @@ namespace VirtualChannelSDK
 {
     public class WtsVirtualChannelStream : Stream
     {
-        private WtsVirtualChannel _virtualChannel;
+        private readonly WtsVirtualChannel _virtualChannel;
+        private readonly bool _readable;
+        private readonly bool _writeable;
 
-        private bool _readable;
-        private bool _writeable;
         private bool _disposed;
 
         public WtsVirtualChannelStream(WtsVirtualChannel virtualChannel)
@@ -160,6 +160,7 @@ namespace VirtualChannelSDK
             if (disposing)
             {
                 _virtualChannel?.Close();
+                base.Dispose(disposing);
             }
 
             _disposed = true;

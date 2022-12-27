@@ -31,7 +31,7 @@ using System.Runtime.InteropServices;
 
 namespace VirtualChannelSDK.Native
 {
-    internal class WtsApi32
+    internal static class WtsApi32
     {
         private const string Wtsapi32DllName = "Wtsapi32.dll";
 

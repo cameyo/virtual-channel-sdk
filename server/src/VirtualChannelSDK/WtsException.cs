@@ -27,14 +27,20 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 using System;
+using System.Runtime.Serialization;
 
 namespace VirtualChannelSDK
 {
-    public class WtsException : Exception
+    [Serializable]
+    public sealed class WtsException : Exception
     {
         public WtsException(uint error)
         {
             LastErrorCode = error;
+        }
+
+        private WtsException(SerializationInfo info, StreamingContext context) : base(info, context)
+        {
         }
 
         public uint LastErrorCode { get; }

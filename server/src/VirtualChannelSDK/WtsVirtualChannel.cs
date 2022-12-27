@@ -40,6 +40,7 @@ namespace VirtualChannelSDK
         private readonly string _channelName;
 
         private IntPtr _channelHandle;
+        private bool _disposed;
 
         public WtsVirtualChannel(string channelName)
             : this(Constants.WTS_CURRENT_SERVER_HANDLE, Constants.WTS_CURRENT_SESSION, channelName)
@@ -153,7 +154,23 @@ namespace VirtualChannelSDK
 
         public void Dispose()
         {
-            Close();
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (_disposed)
+            {
+                return;
+            }
+
+            if (disposing)
+            {
+                Close();
+            }
+
+            _disposed = true;
         }
     }
 }
