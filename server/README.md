@@ -12,9 +12,16 @@ The **Cameyo Virtual Channel** backend uses [Remote Desktop Services Virtual Cha
 Sample usage is in the [Sample.cs](src/VirtualChannelTestApp/Sample.cs) file.
 
 ##  Build
-Use `MSBuild` to build SDK:
+### MSBuild
+Use `MSBuild` command to build SDK:
 ```
 MSBuild src/VirtualChannelSDK/VirtualChannelSDK.csproj -t:restore,build -p:RestorePackagesConfig=true -p:Configuration=Release -p:OutDir=../../dist
+```
+
+### .NET CLI
+Use `dotnet` command to build SDK:
+```
+dotnet build src/VirtualChannelSDK/VirtualChannelSDK.csproj -c Release -o ./dist
 ```
 
 ## Contributing
