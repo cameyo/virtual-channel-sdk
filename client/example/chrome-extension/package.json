@@ -4,7 +4,7 @@
   "description": "Cameyo Virtual Channel sample Chrome extension",
   "main": "dist/background.js",
   "scripts": {
-    "build": "webpack --config webpack/webpack.config.js"
+    "build": "webpack --config webpack.config.js"
   },
   "keywords": [],
   "author": "Cameyo Inc",
