@@ -36,6 +36,8 @@ namespace VirtualChannelSDK
     {
         private const string CameyoVirtualChannelEnv = "CAMEYO_VIRTCHANNEL";
 
+#pragma warning disable CA1822 // Mark members as static
+
         public IEnumerable<string> GetVirtualChannelNames()
         {
             var virtualChannelNames = Environment.GetEnvironmentVariable(CameyoVirtualChannelEnv);
@@ -46,5 +48,8 @@ namespace VirtualChannelSDK
 
             return virtualChannelNames.Split(',').Select(channelName => channelName.Trim());
         }
+
+#pragma warning restore CA1822 // Mark members as static
+
     }
 }

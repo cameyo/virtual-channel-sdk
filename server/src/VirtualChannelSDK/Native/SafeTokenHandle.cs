@@ -36,8 +36,11 @@ namespace VirtualChannelSDK.Native
 {
     internal sealed class SafeTokenHandle : SafeHandleZeroOrMinusOneIsInvalid
     {
-        private SafeTokenHandle()
-            : base(true)
+        public SafeTokenHandle() : this(true)
+        {
+        }
+
+        public SafeTokenHandle(bool ownsHandle) : base(ownsHandle)
         {
         }
 
