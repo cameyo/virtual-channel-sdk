@@ -37,15 +37,11 @@ const transportChannelName = 'ChrExt';
 const vcHandler = new Cameyo.VirtualChannelHandler();
 
 vcHandler.addChannelOpenedListener(connectionHandle => {
-  console.log(
-    `Channel '${connectionHandle.channelName}' for session '${connectionHandle.sessionId}' was opened`
-  );
+  console.log(`Channel '${connectionHandle.channelName}' for session '${connectionHandle.sessionId}' was opened`);
 });
 
 vcHandler.addChannelClosedListener(connectionHandle => {
-  console.log(
-    `Channel '${connectionHandle.channelName}' for session '${connectionHandle.sessionId}' was closed`
-  );
+  console.log(`Channel '${connectionHandle.channelName}' for session '${connectionHandle.sessionId}' was closed`);
 });
 
 vcHandler.addDataReceivedListener((connectionHandle, data) => {
@@ -56,9 +52,7 @@ vcHandler.addDataReceivedListener((connectionHandle, data) => {
   }
 
   const message = readStringFromData(data);
-  console.log(
-    `Received message '${message}' from session '${connectionHandle.sessionId}'`
-  );
+  console.log(`Received message '${message}' from session '${connectionHandle.sessionId}'`);
   if (message !== 'ping') {
     return;
   }

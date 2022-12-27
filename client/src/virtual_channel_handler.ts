@@ -24,25 +24,16 @@
  */
 
 const divider = '_###_';
-const connectionHandleRegex = new RegExp(
-  `^(.*)${divider}([a-zA-Z0-9]{8}-(?:[a-zA-Z0-9]{4}-){3}[a-zA-Z0-9]{12})$`
-);
+const connectionHandleRegex = new RegExp(`^(.*)${divider}([a-zA-Z0-9]{8}-(?:[a-zA-Z0-9]{4}-){3}[a-zA-Z0-9]{12})$`);
 
 export type ConnectionHandle = {
   channelName: string;
   sessionId: string;
 };
 
-export type ChannelOpenedListener = (
-  connectionHandle: ConnectionHandle
-) => void;
-export type ChannelClosedListener = (
-  connectionHandle: ConnectionHandle
-) => void;
-export type DataReceivedListener = (
-  connectionHandle: ConnectionHandle,
-  data: Uint8Array
-) => void;
+export type ChannelOpenedListener = (connectionHandle: ConnectionHandle) => void;
+export type ChannelClosedListener = (connectionHandle: ConnectionHandle) => void;
+export type DataReceivedListener = (connectionHandle: ConnectionHandle, data: Uint8Array) => void;
 
 export class VirtualChannelHandler {
   protected channelOpenedListeners = new Set<ChannelOpenedListener>();
@@ -94,10 +85,7 @@ export class VirtualChannelHandler {
   }
 
   protected onPortConnected(port: chrome.runtime.Port) {
-    if (
-      !port.sender.origin.includes('cameyo.com') &&
-      !port.sender.origin.includes('cameyo.net')
-    ) {
+    if (!port.sender.origin.includes('cameyo.com') && !port.sender.origin.includes('cameyo.net')) {
       return;
     }
 
@@ -112,8 +100,7 @@ export class VirtualChannelHandler {
       this.onPortMessage(connectionHandle, message);
     });
 
-    const serializeConnectionHandle =
-      this.serializeConnectionHandle(connectionHandle);
+    const serializeConnectionHandle = this.serializeConnectionHandle(connectionHandle);
     this.ports.set(serializeConnectionHandle, port);
 
     for (const channelOpenedListener of this.channelOpenedListeners) {
@@ -126,8 +113,7 @@ export class VirtualChannelHandler {
       channelClosedListener(connectionHandle);
     }
 
-    const serializeConnectionHandle =
-      this.serializeConnectionHandle(connectionHandle);
+    const serializeConnectionHandle = this.serializeConnectionHandle(connectionHandle);
     this.ports.delete(serializeConnectionHandle);
   }
 
@@ -140,8 +126,7 @@ export class VirtualChannelHandler {
   }
 
   protected getPort(connectionHandle: ConnectionHandle): chrome.runtime.Port {
-    const serializeConnectionHandle =
-      this.serializeConnectionHandle(connectionHandle);
+    const serializeConnectionHandle = this.serializeConnectionHandle(connectionHandle);
     const port = this.ports.get(serializeConnectionHandle);
     if (port === undefined) {
       throw new Error(`Unknown connection '${serializeConnectionHandle}'`);
@@ -150,9 +135,7 @@ export class VirtualChannelHandler {
     return port;
   }
 
-  protected getConnectionHandleForNewPort(
-    port: chrome.runtime.Port
-  ): ConnectionHandle | undefined {
+  protected getConnectionHandleForNewPort(port: chrome.runtime.Port): ConnectionHandle | undefined {
     const result = connectionHandleRegex.exec(port.name);
     if (result === null) {
       return undefined;
@@ -166,9 +149,7 @@ export class VirtualChannelHandler {
     return connectionHandle;
   }
 
-  protected serializeConnectionHandle(
-    connectionHandle: ConnectionHandle
-  ): string {
+  protected serializeConnectionHandle(connectionHandle: ConnectionHandle): string {
     return `${connectionHandle.channelName}${divider}${connectionHandle.sessionId}`;
   }
 }
