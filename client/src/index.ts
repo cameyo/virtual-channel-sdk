@@ -23,9 +23,19 @@
  * SOFTWARE.
  */
 
-import {VirtualChannelHandler as VirtualChannelHandler_} from './virtual_channel_handler';
+import {
+  VirtualChannelHandler as VirtualChannelHandler_,
+  ConnectionHandle as ConnectionHandle_,
+  ChannelOpenedListener as ChannelOpenedListener_,
+  ChannelClosedListener as ChannelClosedListener_,
+  DataReceivedListener as DataReceivedListener_,
+} from './virtual_channel_handler';
 
 export namespace Cameyo {
   // virtual_channel_handler.ts
   export const VirtualChannelHandler = VirtualChannelHandler_;
+  export type ConnectionHandle = ConnectionHandle_;
+  export type ChannelOpenedListener = ChannelOpenedListener_;
+  export type ChannelClosedListener = ChannelClosedListener_;
+  export type DataReceivedListener = DataReceivedListener_;
 }
