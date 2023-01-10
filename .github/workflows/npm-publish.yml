@@ -10,6 +10,7 @@ on:
 
 env:
   NODE_VERSION: 16
+  WORKING_DIR: ./client
 
 jobs:
   build:
@@ -20,6 +21,7 @@ jobs:
         with:
           node-version: ${{env.NODE_VERSION}}
       - run: npm ci
+        working-directory: ${{env.WORKING_DIR}}
 
   lint:
     needs: build
@@ -30,6 +32,7 @@ jobs:
         with:
           node-version: ${{env.NODE_VERSION}}
       - run: npm run lint
+        working-directory: ${{env.WORKING_DIR}}
 
   format:
     needs: lint
@@ -40,6 +43,7 @@ jobs:
         with:
           node-version: ${{env.NODE_VERSION}}
       - run: npm run formatCheck
+        working-directory: ${{env.WORKING_DIR}}
 
   publish:
     needs: format
@@ -51,5 +55,6 @@ jobs:
           node-version: ${{env.NODE_VERSION}}
           registry-url: https://registry.npmjs.org/
       - run: npm publish
+        working-directory: ${{env.WORKING_DIR}}
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
