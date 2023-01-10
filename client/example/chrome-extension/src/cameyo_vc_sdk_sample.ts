@@ -25,14 +25,6 @@
 
 import {Cameyo} from 'cameyo-virtual-channel-sdk';
 
-function readStringFromData(data: Uint8Array): string {
-  return new TextDecoder().decode(data);
-}
-
-function stringToData(str: string): Uint8Array {
-  return new TextEncoder().encode(str);
-}
-
 const transportChannelName = 'ChrExt';
 const vcHandler = new Cameyo.VirtualChannelHandler();
 
@@ -61,3 +53,11 @@ vcHandler.addDataReceivedListener((connectionHandle, data) => {
   vcHandler.sendData(connectionHandle, responseData);
   vcHandler.disconnect(connectionHandle);
 });
+
+function readStringFromData(data: Uint8Array): string {
+  return new TextDecoder().decode(data);
+}
+
+function stringToData(str: string): Uint8Array {
+  return new TextEncoder().encode(str);
+}
