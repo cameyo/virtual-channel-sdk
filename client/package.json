@@ -9,7 +9,8 @@
     "lint:js": "eslint --ignore-path .gitignore --ext .ts .",
     "lint": "npm run lint:js",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
-    "formatCheck": "prettier --ignore-path .gitignore --check \"**/*.+(js|ts|json)\""
+    "formatCheck:js": "prettier --ignore-path .gitignore --check \"**/*.+(js|ts|json)\"",
+    "formatCheck": "npm run formatCheck:js"
   },
   "keywords": [],
   "author": "Cameyo Inc",
