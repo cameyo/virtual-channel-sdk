@@ -41,8 +41,7 @@ jobs:
 
       - name: Create .npmrc
         run: |
-          tree
-          cat << EOF > ${{env.WORKING_DIR}}/.npmrc
+          cat << EOF > .npmrc
             //registry.npmjs.org/:_authToken=${{env.NPM_TOKEN}}
             registry=https://registry.npmjs.org/
             always-auth=true
@@ -52,4 +51,4 @@ jobs:
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{env.NPM_TOKEN}}
-          NPM_CONFIG_USERCONFIG: ${{env.WORKING_DIR}}/.npmrc
+          NPM_CONFIG_USERCONFIG: .npmrc
