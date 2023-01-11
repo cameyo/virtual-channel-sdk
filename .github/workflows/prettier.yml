@@ -16,6 +16,10 @@ jobs:
   linting:
     name: Checking formatting
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ${{env.WORKING_DIR}}
+
     steps:
       - name: Code Checkout
         uses: actions/checkout@v3
@@ -27,8 +31,6 @@ jobs:
 
       - name: Install Dependencies
         run: npm ci
-        working-directory: ${{env.WORKING_DIR}}
 
       - name: Code Checking formatting
         run: npm run formatCheck
-        working-directory: ${{env.WORKING_DIR}}

@@ -16,6 +16,10 @@ jobs:
   linting:
     name: Linting
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ${{env.WORKING_DIR}}
+
     steps:
       - name: Code Checkout
         uses: actions/checkout@v3
@@ -27,8 +31,6 @@ jobs:
 
       - name: Install Dependencies
         run: npm ci
-        working-directory: ${{env.WORKING_DIR}}
 
       - name: Code Linting
         run: npm run lint
-        working-directory: ${{env.WORKING_DIR}}
