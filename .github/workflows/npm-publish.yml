@@ -11,7 +11,6 @@ on:
 env:
   NODE_VERSION: 16
   WORKING_DIR: client
-  NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
 jobs:
   linting:
@@ -38,3 +37,5 @@ jobs:
       - name: Publishing to npmjs
         run: npm publish --access public
         working-directory: ${{env.WORKING_DIR}}
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
