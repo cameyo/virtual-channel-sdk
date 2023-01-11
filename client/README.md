@@ -1,3 +1,5 @@
+[![ESLint](https://github.com/cameyo/virtual-channel-sdk/actions/workflows/eslint.yml/badge.svg)](https://github.com/cameyo/virtual-channel-sdk/actions/workflows/eslint.yml)
+
 # Cameyo Virtual Channel Client SDK
 
 ## Chrome extension side

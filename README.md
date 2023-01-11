@@ -1,5 +1,3 @@
-[![ESLint](https://github.com/cameyo/virtual-channel-sdk/actions/workflows/eslint.yml/badge.svg)](https://github.com/cameyo/virtual-channel-sdk/actions/workflows/eslint.yml)
-
 # Cameyo Virtual Channel SDK
 
 **Cameyo Virtual Channel SDK** is designed to use in-session Cameyo Virtual Channels. It allows to organize data exchange between the Chrome extension and a remote application in a Cameyo session and provides a set of tools for this.
