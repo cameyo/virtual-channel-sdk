@@ -13,7 +13,7 @@ env:
   WORKING_DIR: client
 
 jobs:
-  linting:
+  checking-formatting:
     name: Checking formatting
     runs-on: ubuntu-latest
     defaults:
