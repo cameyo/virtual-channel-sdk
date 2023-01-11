@@ -36,5 +36,5 @@ jobs:
         working-directory: ${{env.WORKING_DIR}}
 
       - name: Publishing to npmjs
-        run: npm publish
+        run: npm publish --access public
         working-directory: ${{env.WORKING_DIR}}
