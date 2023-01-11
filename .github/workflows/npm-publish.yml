@@ -12,7 +12,7 @@ env:
   NODE_VERSION: 16
   WORKING_DIR: client
   NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-  NPM_CONFIG_USERCONFIG: ${{env.WORKING_DIR}}/.npmrc
+  NPM_CONFIG_USERCONFIG: $WORKING_DIR/.npmrc
 
 jobs:
   linting:
