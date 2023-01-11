@@ -11,7 +11,7 @@ on:
 env:
   NODE_VERSION: 16
   WORKING_DIR: client
-  NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+  NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
 jobs:
   linting:
@@ -26,6 +26,7 @@ jobs:
         with:
           node-version: ${{env.NODE_VERSION}}
           registry-url: https://registry.npmjs.org/
+          always-auth: true
 
       - name: Install Dependencies
         run: npm ci
@@ -38,5 +39,3 @@ jobs:
       - name: Publishing to npmjs
         run: npm publish
         working-directory: ${{env.WORKING_DIR}}
-        env:
-          NODE_AUTH_TOKEN: ${{env.NPM_TOKEN}}
