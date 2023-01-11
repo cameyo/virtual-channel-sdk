@@ -12,6 +12,14 @@
     "formatCheck:js": "prettier --ignore-path .gitignore --check \"**/*.+(js|ts|json)\"",
     "formatCheck": "npm run formatCheck:js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cameyo/virtual-channel-sdk.git"
+  },
+  "homepage": "https://github.com/cameyo/virtual-channel-sdk",
+  "bugs": {
+    "url": "https://github.com/cameyo/virtual-channel-sdk/issues"
+  },
   "keywords": [],
   "author": "Cameyo Inc",
   "license": "MIT",
