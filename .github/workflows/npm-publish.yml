@@ -29,20 +29,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{env.NODE_VERSION}}
+          registry-url: "https://registry.npmjs.org"
 
       - name: Install Dependencies
         run: npm ci
 
       - name: Build
         run: npm run build
-
-      - name: Create .npmrc
-        run: |
-          cat << EOF > .npmrc
-            //registry.npmjs.org/:_authToken=${{env.NPM_TOKEN}}
-            registry=https://registry.npmjs.org/
-            always-auth=true
-          EOF
 
       - name: Publish to npmjs
         run: npm publish
