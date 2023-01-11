@@ -20,6 +20,9 @@
   "bugs": {
     "url": "https://github.com/cameyo/virtual-channel-sdk/issues"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
   "keywords": [],
   "author": "Cameyo Inc",
   "license": "MIT",
