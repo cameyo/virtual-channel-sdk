@@ -29,9 +29,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{env.NODE_VERSION}}
-          cache-dependency-path: ${{env.WORKING_DIR}}/package-lock.json
-          registry-url: https://registry.npmjs.org/
-          always-auth: true
 
       - name: Install Dependencies
         run: npm ci
@@ -51,4 +48,3 @@ jobs:
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{env.NPM_TOKEN}}
-          NPM_CONFIG_USERCONFIG: .npmrc
