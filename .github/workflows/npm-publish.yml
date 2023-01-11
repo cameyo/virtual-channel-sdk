@@ -41,7 +41,7 @@ jobs:
 
       - name: Create .npmrc
         run: |
-          tree -d ${{env.WORKING_DIR}}
+          tree
           cat << EOF > ${{env.WORKING_DIR}}/.npmrc
             //registry.npmjs.org/:_authToken=${{env.NPM_TOKEN}}
             registry=https://registry.npmjs.org/
