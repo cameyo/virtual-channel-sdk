@@ -10,8 +10,4 @@ src/
 webpack.config.js
 tsconfig.json
 package-lock.json
-README_dev.md
-pom.xml
-
-# utilities
-*.bat
+.npmrc
