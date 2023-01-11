@@ -43,3 +43,5 @@ jobs:
 
       - name: Publishing to npmjs
         run: npm publish
+        env:
+          NPM_CONFIG_USERCONFIG: ${{env.WORKING_DIR}}/.npmrc
