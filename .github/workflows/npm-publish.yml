@@ -12,7 +12,6 @@ env:
   NODE_VERSION: 16
   WORKING_DIR: client
   NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-  NPM_CONFIG_USERCONFIG: ./client/.npmrc
 
 jobs:
   linting:
@@ -33,6 +32,8 @@ jobs:
           cache-dependency-path: ${{env.WORKING_DIR}}/package-lock.json
           registry-url: https://registry.npmjs.org/
           always-auth: true
+        env:
+          NPM_CONFIG_USERCONFIG: ${{env.WORKING_DIR}}/.npmrc
 
       - name: Install Dependencies
         run: npm ci
