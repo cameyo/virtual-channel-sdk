@@ -51,3 +51,4 @@ jobs:
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{env.NPM_TOKEN}}
+          NPM_CONFIG_USERCONFIG: ${{env.WORKING_DIR}}/.npmrc
