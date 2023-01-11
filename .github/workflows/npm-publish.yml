@@ -17,6 +17,10 @@ jobs:
   linting:
     name: Publishing Package to npmjs
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ${{env.WORKING_DIR}}
+
     steps:
       - name: Code Checkout
         uses: actions/checkout@v3
@@ -25,18 +29,15 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{env.NODE_VERSION}}
-          working-directory: ${{env.WORKING_DIR}}
+          cache-dependency-path: ${{env.WORKING_DIR}}/package-lock.json
           registry-url: https://registry.npmjs.org/
           always-auth: true
 
       - name: Install Dependencies
         run: npm ci
-        working-directory: ${{env.WORKING_DIR}}
 
       - name: Build
         run: npm run build
-        working-directory: ${{env.WORKING_DIR}}
 
       - name: Publishing to npmjs
         run: npm publish
-        working-directory: ${{env.WORKING_DIR}}
