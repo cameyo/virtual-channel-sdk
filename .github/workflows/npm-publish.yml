@@ -37,7 +37,11 @@ jobs:
       - name: Build
         run: npm run build
 
+      - run: npm whoami
+
       - name: Publish to npmjs
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{env.NPM_TOKEN}}
+
+      - run: npm whoami
