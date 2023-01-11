@@ -6,7 +6,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "lint": "eslint --ignore-path .gitignore --ext .ts .",
+    "lint:js": "eslint --ignore-path .gitignore --ext .ts .",
+    "lint": "npm run lint:js",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
     "formatCheck": "prettier --ignore-path .gitignore --check \"**/*.+(js|ts|json)\""
   },
