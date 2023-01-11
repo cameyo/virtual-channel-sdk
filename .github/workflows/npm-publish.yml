@@ -41,5 +41,3 @@ jobs:
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{env.NPM_TOKEN}}
-
-      - run: npm whoami
