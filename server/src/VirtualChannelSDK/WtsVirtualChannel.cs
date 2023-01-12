@@ -112,7 +112,7 @@ namespace VirtualChannelSDK
             {
                 throw new WtsException(GetLastError());
             }
-            
+
             return (int)bytesRead;
         }
 
