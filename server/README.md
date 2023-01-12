@@ -1,4 +1,5 @@
 [![dotnet format](https://github.com/cameyo/virtual-channel-sdk/actions/workflows/dotnet-format.yml/badge.svg)](https://github.com/cameyo/virtual-channel-sdk/actions/workflows/dotnet-format.yml)
+[![.NET Build](https://github.com/cameyo/virtual-channel-sdk/actions/workflows/dotnet-build.yml/badge.svg)](https://github.com/cameyo/virtual-channel-sdk/actions/workflows/dotnet-build.yml)
 
 # Cameyo Virtual Channel Server SDK
 
