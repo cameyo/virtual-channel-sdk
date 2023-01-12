@@ -4,9 +4,14 @@ on:
   push:
     branches:
       - main
+    paths:
+      - client/**
+
   pull_request:
     branches:
       - main
+    paths:
+      - client/**
 
 env:
   NODE_VERSION: 16
