@@ -47,4 +47,4 @@ jobs:
       - name: Publish to npmjs
         run: npm publish
         env:
-          NPM_CONFIG_USERCONFIG: $(pwd)/.npmrc
+          NPM_CONFIG_USERCONFIG: /home/runner/work/virtual-channel-sdk/virtual-channel-sdk/client/.npmrc
