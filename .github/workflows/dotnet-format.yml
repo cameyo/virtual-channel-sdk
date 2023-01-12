@@ -1,0 +1,41 @@
+name: dotnet format
+
+on:
+  push:
+    branches:
+      - main
+    #paths:
+    #  - server/**
+
+  pull_request:
+    branches:
+      - main
+    #paths:
+    #  - server/**
+
+env:
+  DOTNET_VERSION: 3.1.x
+  WORKING_DIR: server
+
+jobs:
+  checking-formatting:
+    name: Checking formatting
+    runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: ${{env.WORKING_DIR}}
+
+    steps:
+      - name: Code Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: ${{env.DOTNET_VERSION}}
+
+      - name: Install dotnet-format tool
+        run: dotnet tool install -g dotnet-format
+
+      - name: Run dotnet format
+        run: dotnet-format '.\' --folder --check --verbosity diagnostic
