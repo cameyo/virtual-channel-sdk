@@ -39,6 +39,18 @@ namespace VirtualChannelSDK
             LastErrorCode = error;
         }
 
+        private WtsException()
+        {
+        }
+
+        private WtsException(string message) : base(message)
+        {
+        }
+
+        private WtsException(string message, Exception innerException) : base(message, innerException)
+        {
+        }
+
         private WtsException(SerializationInfo info, StreamingContext context) : base(info, context)
         {
         }

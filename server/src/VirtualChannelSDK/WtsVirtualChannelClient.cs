@@ -89,6 +89,7 @@ namespace VirtualChannelSDK
             if (disposing)
             {
                 _virtualChannel?.Dispose();
+                _virtualChannelStream?.Dispose();
             }
 
             _disposed = true;

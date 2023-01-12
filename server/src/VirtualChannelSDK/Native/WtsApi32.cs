@@ -38,9 +38,7 @@ namespace VirtualChannelSDK.Native
         [DllImport(Wtsapi32DllName, SetLastError = true)]
         public static extern IntPtr WTSVirtualChannelOpen(IntPtr server,
             int sessionId,
-#pragma warning disable CA2101 // Specify marshaling for P/Invoke string arguments
             [MarshalAs(UnmanagedType.LPStr)] string virtualName);
-#pragma warning restore CA2101 // Specify marshaling for P/Invoke string arguments
 
         [DllImport(Wtsapi32DllName, SetLastError = true)]
         public static extern int WTSVirtualChannelWrite(IntPtr channelHandle,

@@ -47,6 +47,11 @@ namespace VirtualChannelSDK
         {
         }
 
+        ~WtsVirtualChannel()
+        {
+            Dispose(false);
+        }
+
         internal WtsVirtualChannel(IntPtr server, int sessionId, string channelName)
         {
             _server = server;
