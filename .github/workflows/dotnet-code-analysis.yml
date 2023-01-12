@@ -34,6 +34,9 @@ jobs:
         with:
           dotnet-version: ${{env.DOTNET_VERSION}}
 
+      - name: Run NuGet restore
+        run: dotnet restore src/VirtualChannelSDK.sln
+
       - name: Run .NET Code Analysis
         uses: dotnet/code-analysis@main
         id: code-analysis
