@@ -1,12 +1,8 @@
 name: Publish to NPM
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+  release:
+    types: [created]
 
 env:
   NODE_VERSION: 16
