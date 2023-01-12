@@ -35,7 +35,7 @@ jobs:
           dotnet-version: ${{env.DOTNET_VERSION}}
 
       - name: Run .NET Code Analysis
-        uses: dotnet/code-analysis@v1
+        uses: dotnet/code-analysis@main
         id: code-analysis
         with:
           solution: src/VirtualChannelSDK.sln
