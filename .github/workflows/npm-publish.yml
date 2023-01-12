@@ -29,14 +29,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{env.NODE_VERSION}}
-
-      - name: Create .npmrc
-        run: |
-          cat << EOF > .npmrc
-            //registry.npmjs.org/:_authToken=${{env.NPM_TOKEN}}
-            registry=https://registry.npmjs.org/
-            always-auth=true
-          EOF
+          registry-url: "https://registry.npmjs.org"
 
       - name: Install Dependencies
         run: npm ci
@@ -47,4 +40,4 @@ jobs:
       - name: Publish to npmjs
         run: npm publish
         env:
-          NPM_CONFIG_USERCONFIG: /home/runner/work/virtual-channel-sdk/virtual-channel-sdk/client/.npmrc
+          NODE_AUTH_TOKEN: ${{env.NPM_TOKEN}}
