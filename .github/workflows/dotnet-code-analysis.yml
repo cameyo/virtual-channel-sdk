@@ -1,0 +1,43 @@
+name: .NET Code Analysis
+
+on:
+  push:
+    branches:
+      - main
+    #paths:
+    #  - server/**
+
+  pull_request:
+    branches:
+      - main
+    #paths:
+    #  - server/**
+
+env:
+  DOTNET_VERSION: 3.1.x
+  WORKING_DIR: server
+
+jobs:
+  code-analyzing:
+    name: Analyzing .NET Code
+    runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: ${{env.WORKING_DIR}}
+
+    steps:
+      - name: Code Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: ${{env.DOTNET_VERSION}}
+
+      - name: Run .NET Code Analysis
+        uses: dotnet/code-analysis@v1
+        id: code-analysis
+        with:
+          solution: src/VirtualChannelSDK.sln
+          build-breaking: true
+          all-categories: all
