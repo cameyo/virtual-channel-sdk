@@ -2,14 +2,46 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
     <AnalysisMode>All</AnalysisMode>
     <AnalysisLevel>latest-all</AnalysisLevel>
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <Title>Cameyo Virtual Channel Server SDK</Title>
+    <Version>1.4.2</Version>
+    <Authors>Cameyo</Authors>
+    <Company>Cameyo Inc</Company>
+    <Copyright>Copyright © Cameyo Inc 2023</Copyright>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/cameyo/virtual-channel-sdk.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/cameyo/virtual-channel-sdk/tree/main/server</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Description>Cameyo Virtual Channel Server SDK provides a .NET Standard 2.0 class library for convenient work with Remote Desktop Services Virtual Channels.</Description>
+    <PackageTags>Cameyo;RDS;Virtual-Channels;SDK</PackageTags>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
   <ItemGroup>
     <Folder Include="Native\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
