@@ -25,7 +25,7 @@ Should allow external connections from cameyo.com. To do this, just add the foll
 ````
 
 ### Code sample
-Sample usage is in the [cameyo_vc_sdk_sample.ts](example/chrome-extension/src/cameyo_vc_sdk_sample.ts) file.
+Sample usage is in the [cameyo_vc_sdk_sample.ts](https://github.com/cameyo/virtual-channel-sdk/blob/main/client/example/chrome-extension/src/cameyo_vc_sdk_sample.ts) file.
 
 ##  Installation
 In order to get started developing, run `npm install` to install the required dependencies.

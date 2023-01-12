@@ -13,7 +13,7 @@ The **Cameyo Virtual Channel** backend uses [Remote Desktop Services Virtual Cha
 2. provides a client to communicate over a channel.
 
 ## Code sample
-Sample usage is in the [Sample.cs](src/VirtualChannelTestApp/Sample.cs) file.
+Sample usage is in the [Sample.cs](https://github.com/cameyo/virtual-channel-sdk/blob/main/server/src/VirtualChannelTestApp/Sample.cs) file.
 
 ##  Build
 ### MSBuild
