@@ -31,6 +31,12 @@ jobs:
           node-version: ${{env.NODE_VERSION}}
           registry-url: "https://registry.npmjs.org"
 
+      - name: Copy .npmrc to working directory
+        run: |
+          cp /home/runner/work/_temp/.npmrc ${{env.WORKING_DIR}}/.npmrc
+          cat ${{env.WORKING_DIR}}/.npmrc
+          echo "${{env.WORKING_DIR}}/.npmrc" >> $NPM_CONFIG_USERCONFIG
+
       - name: Install Dependencies
         run: npm ci
 
