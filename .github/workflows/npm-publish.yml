@@ -10,7 +10,7 @@ on:
 
 env:
   NODE_VERSION: 16
-  WORKING_DIR: client
+  WORKING_DIR: ${{env.GITHUB_WORKSPACE}}/client
   NPM_TOKEN: ${{secrets.NPM_TOKEN}}
 
 jobs:
@@ -33,9 +33,9 @@ jobs:
 
       - name: Copy .npmrc to working directory
         run: |
-          cp /home/runner/work/_temp/.npmrc ${{env.WORKING_DIR}}/.npmrc
-          cat ${{env.WORKING_DIR}}/.npmrc
-          echo "${{env.WORKING_DIR}}/.npmrc" >> $NPM_CONFIG_USERCONFIG
+          cp ${{env.GITHUB_WORKSPACE}}/.npmrc ${{env.GITHUB_WORKSPACE}}/${{env.WORKING_DIR}}/.npmrc
+          cat ${{env.GITHUB_WORKSPACE}}/${{env.WORKING_DIR}}/.npmrc
+          echo "${{env.GITHUB_WORKSPACE}}/${{env.WORKING_DIR}}/.npmrc" >> $NPM_CONFIG_USERCONFIG
 
       - name: Install Dependencies
         run: npm ci
