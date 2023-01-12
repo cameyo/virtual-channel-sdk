@@ -10,7 +10,7 @@ on:
 
 env:
   NODE_VERSION: 16
-  WORKING_DIR: ${{env.GITHUB_WORKSPACE}}/client
+  WORKING_DIR: client
   NPM_TOKEN: ${{secrets.NPM_TOKEN}}
 
 jobs:
