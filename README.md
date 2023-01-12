@@ -7,8 +7,12 @@ This SDK consists of client and server parts.
 ## Client SDK
 **Client SDK** provides an SDK for integrating your Chrome extension with Cameyo Virtual Channels. More details in [Cameyo Virtual Channel Client SDK](client/README.md).
 
+It is also available as a [npmjs package](https://www.npmjs.com/package/cameyo-virtual-channel-sdk).
+
 ## Server SDK
 **Server SDK** provides an SDK for integrating your remote application with Cameyo Virtual Channels. More details in [Cameyo Virtual Channel Server SDK](server/README.md).
+
+It is also available as a [NuGet package](https://www.nuget.org/packages/VirtualChannelSDK).
 
 ## Activation
 To enable Cameyo Virtual Channel SDK need to set `!VIRTCHANNEL=` and `!CHROMEEXTID=` [PowerTags](https://helpcenter.cameyo.com/support/solutions/articles/80000254678-power-tags).
