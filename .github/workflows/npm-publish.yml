@@ -31,11 +31,10 @@ jobs:
           node-version: ${{env.NODE_VERSION}}
           registry-url: "https://registry.npmjs.org"
 
-      - name: Copy .npmrc to working directory
+      - name: Check path
         run: |
-          cp ${{env.GITHUB_WORKSPACE}}/.npmrc ${{env.GITHUB_WORKSPACE}}/${{env.WORKING_DIR}}/.npmrc
-          cat ${{env.GITHUB_WORKSPACE}}/${{env.WORKING_DIR}}/.npmrc
-          echo "${{env.GITHUB_WORKSPACE}}/${{env.WORKING_DIR}}/.npmrc" >> $NPM_CONFIG_USERCONFIG
+          pwd
+          tree
 
       - name: Install Dependencies
         run: npm ci
