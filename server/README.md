@@ -1,3 +1,5 @@
+[![dotnet format](https://github.com/cameyo/virtual-channel-sdk/actions/workflows/dotnet-format.yml/badge.svg)](https://github.com/cameyo/virtual-channel-sdk/actions/workflows/dotnet-format.yml)
+
 # Cameyo Virtual Channel Server SDK
 
 The **Cameyo Virtual Channel** backend uses [Remote Desktop Services Virtual Channels](https://learn.microsoft.com/en-us/windows/win32/termserv/terminal-services-virtual-channels) as transport.
