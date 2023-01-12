@@ -4,22 +4,22 @@ on:
   push:
     branches:
       - main
-    #paths:
-    #  - server/**
+    paths:
+      - server/**
 
   pull_request:
     branches:
       - main
-    #paths:
-    #  - server/**
+    paths:
+      - server/**
 
 env:
   DOTNET_VERSION: 3.1.x
   WORKING_DIR: server
 
 jobs:
-  code-analyzing:
-    name: Analyzing .NET Code
+  dotnet-build:
+    name: Building and Analyzing .NET Code
     runs-on: windows-latest
     defaults:
       run:
