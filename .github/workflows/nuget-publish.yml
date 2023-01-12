@@ -1,4 +1,4 @@
-name: Publish to NUGET
+name: Publish to NuGet
 
 on: [workflow_dispatch]
 
@@ -9,7 +9,7 @@ env:
 
 jobs:
   publishing:
-    name: Publishing Package to nuget
+    name: Publishing Package to NuGet
     runs-on: windows-latest
     defaults:
       run:
@@ -19,6 +19,9 @@ jobs:
       - name: Code Checkout
         uses: actions/checkout@v3
 
+      - name: Setup NuGet
+        uses: NuGet/setup-nuget@v1.1.1
+
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v3
         with:
@@ -27,5 +30,5 @@ jobs:
       - name: Run .NET pack
         run: dotnet pack src/VirtualChannelSDK/VirtualChannelSDK.csproj -c Release -o ./dist
 
-      - name: Publish to nuget
-        run: nuget push ./dist/**.nupkg -Source 'https://api.nuget.org/v3/index.json' -ApiKey ${{env.NUGET_TOKEN}}
+      - name: Publish to NuGet
+        run: nuget push .\dist\**.nupkg -Source 'https://api.nuget.org/v3/index.json' -ApiKey ${{env.NUGET_TOKEN}}
