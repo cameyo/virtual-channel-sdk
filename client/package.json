@@ -1,6 +1,6 @@
 {
   "name": "cameyo-virtual-channel-sdk",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "Cameyo Virtual Channel SDK",
   "main": "dist/sdk.js",
   "types": "dist/index.d.ts",
@@ -23,7 +23,11 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
-  "keywords": [],
+  "keywords": [
+    "cameyo",
+    "chrome-extension",
+    "sdk"
+  ],
   "author": "Cameyo Inc",
   "license": "MIT",
   "devDependencies": {
