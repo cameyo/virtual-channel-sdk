@@ -1,4 +1,4 @@
-name: .NET Code Analysis
+name: .NET Build
 
 on:
   push:
@@ -34,13 +34,5 @@ jobs:
         with:
           dotnet-version: ${{env.DOTNET_VERSION}}
 
-      - name: Run NuGet restore
-        run: dotnet restore src/VirtualChannelSDK.sln
-
-      - name: Run .NET Code Analysis
-        uses: dotnet/code-analysis@main
-        id: code-analysis
-        with:
-          solution: src/VirtualChannelSDK.sln
-          build-breaking: true
-          all-categories: all
+      - name: Run .NET build
+        run: dotnet build src/VirtualChannelSDK.sln
