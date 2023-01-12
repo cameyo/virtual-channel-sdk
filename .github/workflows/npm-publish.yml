@@ -29,12 +29,17 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{env.NODE_VERSION}}
-          registry-url: "https://registry.npmjs.org"
 
-      - name: Check path
+      - name: Create .npmrc
         run: |
-          pwd
-          tree
+          cat << EOF > .npmrc
+            //registry.npmjs.org/:_authToken=${{env.NPM_TOKEN}}
+            registry=https://registry.npmjs.org/
+            always-auth=true
+          EOF
+
+      - name: Change NPM_CONFIG_USERCONFIG
+        run: echo "${{pwd}}/.npmrc" >> $NPM_CONFIG_USERCONFIG
 
       - name: Install Dependencies
         run: npm ci
@@ -44,5 +49,3 @@ jobs:
 
       - name: Publish to npmjs
         run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{env.NPM_TOKEN}}
