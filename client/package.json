@@ -1,6 +1,6 @@
 {
   "name": "cameyo-virtual-channel-sdk",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "Cameyo Virtual Channel SDK",
   "main": "dist/sdk.js",
   "types": "dist/index.d.ts",
