@@ -1,6 +1,7 @@
 [![ESLint](https://github.com/cameyo/virtual-channel-sdk/actions/workflows/eslint.yml/badge.svg)](https://github.com/cameyo/virtual-channel-sdk/actions/workflows/eslint.yml)
 [![Prettier](https://github.com/cameyo/virtual-channel-sdk/actions/workflows/prettier.yml/badge.svg)](https://github.com/cameyo/virtual-channel-sdk/actions/workflows/prettier.yml)
-[![Publish to NPM](https://github.com/cameyo/virtual-channel-sdk/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/cameyo/virtual-channel-sdk/actions/workflows/npm-publish.yml)
+[![Publish to npmjs](https://github.com/cameyo/virtual-channel-sdk/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/cameyo/virtual-channel-sdk/actions/workflows/npm-publish.yml)
+[![npm version](https://img.shields.io/npm/v/cameyo-virtual-channel-sdk.svg)](https://www.npmjs.com/package/cameyo-virtual-channel-sdk)
 
 # Cameyo Virtual Channel Client SDK
 
