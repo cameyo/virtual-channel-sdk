@@ -26,7 +26,7 @@
 import {Cameyo} from 'cameyo-virtual-channel-sdk';
 
 const transportChannelName = 'ChrExt';
-const vcHandler = new Cameyo.VirtualChannelHandler();
+const vcHandler = new Cameyo.VirtualChannels.VirtualChannelHandler();
 
 vcHandler.addChannelOpenedListener(connectionHandle => {
   console.log(`Channel '${connectionHandle.channelName}' for session '${connectionHandle.sessionId}' was opened`);

@@ -23,7 +23,7 @@
  * SOFTWARE.
  */
 
-export namespace Cameyo {
+export namespace Cameyo.VirtualChannels {
   const divider = '_###_';
   const connectionHandleRegex = new RegExp(`^(.*)${divider}([a-zA-Z0-9]{8}-(?:[a-zA-Z0-9]{4}-){3}[a-zA-Z0-9]{12})$`);
 
