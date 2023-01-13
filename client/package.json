@@ -16,7 +16,7 @@
     "type": "git",
     "url": "https://github.com/cameyo/virtual-channel-sdk.git"
   },
-  "homepage": "https://github.com/cameyo/virtual-channel-sdk",
+  "homepage": "https://github.com/cameyo/virtual-channel-sdk/tree/main/client",
   "bugs": {
     "url": "https://github.com/cameyo/virtual-channel-sdk/issues"
   },
