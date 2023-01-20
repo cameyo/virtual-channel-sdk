@@ -44,7 +44,7 @@ To build sample extension, run `npm run build`, which will create the following 
 * `/dist/manifest.json` – Chrome Extension Manifest V3 file.
 
 ## Npm package
-To create an nmp package, run `npm pack` command, which will create **cameyo-virtual-channel-sdk-version.tgz**.
+To create an npm package, run `npm pack` command, which will create **cameyo-virtual-channel-sdk-version.tgz**.
 
 To install this package into your project, use `npm install cameyo-virtual-channel-sdk-version.tgz` command.
 
