@@ -86,7 +86,11 @@ export namespace Cameyo.VirtualChannels {
     }
 
     protected onPortConnected(port: chrome.runtime.Port) {
-      if (!port.sender.origin.includes('cameyo.com') && !port.sender.origin.includes('cameyo.net')) {
+      if (
+        port.sender === undefined ||
+        port.sender.origin === undefined ||
+        (!port.sender.origin.includes('cameyo.com') && !port.sender.origin.includes('cameyo.net'))
+      ) {
         return;
       }
 
