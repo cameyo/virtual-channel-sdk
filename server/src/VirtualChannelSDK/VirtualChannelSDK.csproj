@@ -13,10 +13,10 @@
 
   <PropertyGroup>
     <Title>Cameyo Virtual Channel Server SDK</Title>
-    <Version>1.4.3</Version>
+    <Version>1.4.4</Version>
     <Authors>Cameyo</Authors>
     <Company>Cameyo Inc</Company>
-    <Copyright>Copyright © Cameyo Inc 2023</Copyright>
+    <Copyright>Copyright © Cameyo Inc 2024</Copyright>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/cameyo/virtual-channel-sdk.git</RepositoryUrl>
     <PackageProjectUrl>https://github.com/cameyo/virtual-channel-sdk/tree/main/server</PackageProjectUrl>
