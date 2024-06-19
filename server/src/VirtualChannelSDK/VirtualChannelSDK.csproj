@@ -13,7 +13,7 @@
 
   <PropertyGroup>
     <Title>Cameyo Virtual Channel Server SDK</Title>
-    <Version>1.4.4</Version>
+    <Version>1.4.5</Version>
     <Authors>Cameyo</Authors>
     <Company>Cameyo Inc</Company>
     <Copyright>Copyright © Cameyo Inc 2024</Copyright>

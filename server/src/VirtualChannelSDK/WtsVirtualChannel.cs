@@ -47,6 +47,11 @@ namespace VirtualChannelSDK
         {
         }
 
+        public WtsVirtualChannel(int sessionId, string channelName)
+            : this(Constants.WTS_CURRENT_SERVER_HANDLE, sessionId, channelName)
+        {
+        }
+
         ~WtsVirtualChannel()
         {
             Dispose(false);
